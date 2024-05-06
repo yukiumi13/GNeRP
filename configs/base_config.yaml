@@ -1,0 +1,51 @@
+expname: loss_mean
+parent_config: /dataset/yokoli/neurecon/configs/pnr.yaml
+# expname: neus
+
+# device_ids: [0]     # single gpu           ; run on specified GPU
+# device_ids: [1, 0]  # DP                   ; run on specified GPU
+device_ids: -1        # single GPU / DP / DDP; run on all available GPUs; 
+
+data:     
+  data_dir: /dataset/yokoli/data/pol/duck
+  # crop_quantile: [3,2]
+  opengl: True
+  scale_radius: 2.0
+  chromatic: sRGB
+
+model:  
+  surface:
+    D: 8
+    W: 256
+    skips: [4]
+    radius_init: 0.5
+    embed_multires: 8
+
+training:
+  pol:
+    splat: True
+  loss:
+  # lambda config
+    w_splat: 0.0
+    w_eik: 0.1
+    w_aop: 0.1
+    w_mask: 0.1
+    w_rgb: 1.0
+    pol_rew: False
+    splat_rew: False
+  # clip config
+    dop_upper: -1
+  # train scheduler
+    pol_start_it: -1
+    splat_start_it: 50000
+  # mask config
+    aop_mask: True
+  # objective function config
+    opengl: True # NOTE: ensure the alignment with data.opengl!
+    normal_perspective: True
+    svd_sup: True
+
+  log_root_dir: "logs/pnr/duck"
+  num_iters: 200000 # 300k
+  i_val: 10000
+  i_val_mesh: 10000

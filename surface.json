@@ -1,0 +1,15 @@
+{
+    "exp": "logs/pnr/pmivr_camera_rgb_1.0",
+    "eval": "logs/pnr/pmivr_camera_rgb_1.0",
+    "bbox_min": [
+        -0.2,
+        0,
+        -0.04
+    ],
+    "bbox_max":[
+        0.3,
+        1.0,
+        0.5
+    ],
+    "iteration": "latest"
+}
