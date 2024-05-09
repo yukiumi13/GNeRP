@@ -7,6 +7,8 @@
 This is the official repo for the implementation of [GNeRP: Gaussian-guided Neural Reconstruction of
 Reflective Objects with Noisy Polarization Priors](https://iclr.cc/virtual/2024/poster/17774), Yang LI, Ruizheng WU, Jiyong LI, Ying-Cong Chen.
 
+📣:<font color=red> **I'm actively looking for Ph.D. positions.** </font>
+
 ## Abstract
 * 🚀 We proposed Gaussian Splatting of surface **normals** dedicated to reflective objects.
 ![Image](docs/normal_splatting.png)
@@ -76,7 +78,8 @@ The dataset is split into real scenes and synthetic scenes. Camera parameters fo
 ## TODO
 
 - [x] release training code.
-- [x] release PolRef Dataset.
+- [x] release PolRef Synthetic Dataset.
+- [ ] release PolRef Real Dataset.
 
 ## Citation
 
