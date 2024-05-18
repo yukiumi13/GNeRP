@@ -79,7 +79,7 @@ The dataset is split into real scenes and synthetic scenes. Camera parameters fo
 
 - [x] release training code.
 - [x] release PolRef Synthetic Dataset.
-- [ ] release PolRef Real Dataset.
+- [x] release PolRef Real Dataset.
 
 ## Citation
 
